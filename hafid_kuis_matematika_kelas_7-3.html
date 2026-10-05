@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hafid - Kuis Matematika Kelas 7</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#4f46e5,#06b6d4);
+  min-height:100vh;color:#172033;padding:20px;
+}
+.container{
+  max-width:700px;margin:auto;background:white;border-radius:20px;
+  padding:25px;box-shadow:0 12px 35px rgba(0,0,0,.2);
+}
+h1{text-align:center;color:#4f46e5;margin-bottom:5px}
+.subtitle{text-align:center;color:#64748b;margin-bottom:25px}
+.question{
+  background:#f8fafc;border-radius:15px;padding:18px;margin:16px 0;
+  border:1px solid #e2e8f0;
+}
+.question h3{margin-top:0}
+label{
+  display:block;background:white;border:1px solid #cbd5e1;
+  padding:12px;border-radius:10px;margin:8px 0;cursor:pointer;
+}
+label:hover{background:#eef2ff}
+button{
+  width:100%;padding:15px;border:0;border-radius:12px;
+  background:#4f46e5;color:white;font-size:17px;font-weight:bold;
+  cursor:pointer;margin-top:15px;
+}
+button:hover{background:#3730a3}
+#result{
+  display:none;text-align:center;margin-top:20px;padding:20px;
+  background:#ecfeff;border-radius:15px;font-size:20px;font-weight:bold;
+}
+.score{color:#0891b2;font-size:30px}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>📚 HAFID</h1>
+  <div class="subtitle">Kuis Matematika Kelas 7</div>
+
+  <form id="quiz">
+    <div class="question">
+      <h3>1. Hasil dari 15 + (-8) adalah...</h3>
+      <label><input type="radio" name="q1" value="a"> A. 7</label>
+      <label><input type="radio" name="q1" value="b"> B. -7</label>
+      <label><input type="radio" name="q1" value="c"> C. 23</label>
+      <label><input type="radio" name="q1" value="d"> D. -23</label>
+    </div>
+
+    <div class="question">
+      <h3>2. Hasil dari 3 × (-6) adalah...</h3>
+      <label><input type="radio" name="q2" value="a"> A. 18</label>
+      <label><input type="radio" name="q2" value="b"> B. -18</label>
+      <label><input type="radio" name="q2" value="c"> C. 9</label>
+      <label><input type="radio" name="q2" value="d"> D. -9</label>
+    </div>
+
+    <div class="question">
+      <h3>3. Pecahan 3/4 jika diubah menjadi desimal adalah...</h3>
+      <label><input type="radio" name="q3" value="a"> A. 0,25</label>
+      <label><input type="radio" name="q3" value="b"> B. 0,5</label>
+      <label><input type="radio" name="q3" value="c"> C. 0,75</label>
+      <label><input type="radio" name="q3" value="d"> D. 1,25</label>
+    </div>
+
+    <div class="question">
+      <h3>4. Jika x + 7 = 15, maka nilai x adalah...</h3>
+      <label><input type="radio" name="q4" value="a"> A. 7</label>
+      <label><input type="radio" name="q4" value="b"> B. 8</label>
+      <label><input type="radio" name="q4" value="c"> C. 9</label>
+      <label><input type="radio" name="q4" value="d"> D. 22</label>
+    </div>
+
+    <div class="question">
+      <h3>5. Keliling persegi dengan sisi 9 cm adalah...</h3>
+      <label><input type="radio" name="q5" value="a"> A. 18 cm</label>
+      <label><input type="radio" name="q5" value="b"> B. 27 cm</label>
+      <label><input type="radio" name="q5" value="c"> C. 36 cm</label>
+      <label><input type="radio" name="q5" value="d"> D. 81 cm</label>
+    </div>
+
+    <div class="question">
+      <h3>6. Luas persegi panjang dengan panjang 12 cm dan lebar 5 cm adalah...</h3>
+      <label><input type="radio" name="q6" value="a"> A. 17 cm²</label>
+      <label><input type="radio" name="q6" value="b"> B. 34 cm²</label>
+      <label><input type="radio" name="q6" value="c"> C. 60 cm²</label>
+      <label><input type="radio" name="q6" value="d"> D. 120 cm²</label>
+    </div>
+
+    <div class="question">
+      <h3>7. Sederhanakan perbandingan 12 : 18.</h3>
+      <label><input type="radio" name="q7" value="a"> A. 1 : 2</label>
+      <label><input type="radio" name="q7" value="b"> B. 2 : 3</label>
+      <label><input type="radio" name="q7" value="c"> C. 3 : 4</label>
+      <label><input type="radio" name="q7" value="d"> D. 4 : 5</label>
+    </div>
+
+    <div class="question">
+      <h3>8. Jika 2x = 18, maka nilai x adalah...</h3>
+      <label><input type="radio" name="q8" value="a"> A. 6</label>
+      <label><input type="radio" name="q8" value="b"> B. 8</label>
+      <label><input type="radio" name="q8" value="c"> C. 9</label>
+      <label><input type="radio" name="q8" value="d"> D. 36</label>
+    </div>
+
+    <div class="question">
+      <h3>9. Sudut siku-siku besarnya adalah...</h3>
+      <label><input type="radio" name="q9" value="a"> A. 45°</label>
+      <label><input type="radio" name="q9" value="b"> B. 60°</label>
+      <label><input type="radio" name="q9" value="c"> C. 90°</label>
+      <label><input type="radio" name="q9" value="d"> D. 180°</label>
+    </div>
+
+    <div class="question">
+      <h3>10. Nilai dari 2³ adalah...</h3>
+      <label><input type="radio" name="q10" value="a"> A. 6</label>
+      <label><input type="radio" name="q10" value="b"> B. 8</label>
+      <label><input type="radio" name="q10" value="c"> C. 9</label>
+      <label><input type="radio" name="q10" value="d"> D. 12</label>
+    </div>
+
+    <button type="button" onclick="checkQuiz()">Lihat Nilai</button>
+  </form>
+
+  <div id="result"></div>
+</div>
+
+<script>
+function checkQuiz(){
+  const answers={q1:"a",q2:"b",q3:"c",q4:"b",q5:"c",
+                 q6:"c",q7:"b",q8:"c",q9:"c",q10:"b"};
+  let score=0, answered=0;
+
+  for(const q in answers){
+    const selected=document.querySelector('input[name="'+q+'"]:checked');
+    if(selected){
+      answered++;
+      if(selected.value===answers[q]) score++;
+    }
+  }
+
+  const result=document.getElementById("result");
+  result.style.display="block";
+  result.innerHTML=
+    `🎯 Nilai kamu<br><span class="score">${score * 10}/100</span><br>`+
+    `${score} benar dari 10 soal.<br><br>`+
+    (score>=8 ? "🔥 Mantap! Matematika kamu bagus!" :
+     score>=6 ? "👍 Lumayan! Tinggal lebih banyak latihan." :
+     "💪 Jangan menyerah, coba pelajari lagi materinya!");
+
+  result.scrollIntoView({behavior:"smooth"});
+}
+</script>
+</body>
+</html>
